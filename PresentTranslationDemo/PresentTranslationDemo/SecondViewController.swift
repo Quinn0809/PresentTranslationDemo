@@ -10,6 +10,8 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var imageV: UIImageView!
+    @IBOutlet weak var bt: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,4 +27,7 @@ class SecondViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    deinit {
+        print("SecondViewController",#function)
+    }
 }

@@ -24,7 +24,8 @@ class QTransitionController: NSObject {
     }
     
     private var translateType:TranslateType = .present
-    
+    weak var fromView:UIView?
+    weak var toView:UIView?
     var presentType:QPresentTransitionAnimatorLibrary = .fadeIn{
         didSet{
             translateType = .present
@@ -40,7 +41,7 @@ class QTransitionController: NSObject {
 extension QTransitionController:UIViewControllerTransitioningDelegate{
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return presentType.transition()
+        return presentType.transition(from:fromView ,to:toView)
     }
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return dismissType.transition()
