@@ -37,27 +37,25 @@ class QTransitionController: NSObject {
     }
 
 }
-
 extension QTransitionController:UIViewControllerTransitioningDelegate{
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return QPresentTransitionAnimatorLibrary.fadeIn.transition()
+        return presentType.transition()
     }
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        
-        return QDismissTransitionAnimatorLibrary.fadeOut.transition()
+        return dismissType.transition()
     }
-
-//    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-//
-//    }
-//    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-//
-//    }
-//    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-//
-//    }
-
+    
+    //    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    //
+    //    }
+    //    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+    //
+    //    }
+    //    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+    //
+    //    }
+    
 }
 extension QTransitionController:UIViewControllerInteractiveTransitioning{
     func startInteractiveTransition(_ transitionContext: UIViewControllerContextTransitioning) {
@@ -66,3 +64,4 @@ extension QTransitionController:UIViewControllerInteractiveTransitioning{
     
     
 }
+

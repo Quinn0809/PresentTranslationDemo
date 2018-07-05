@@ -9,29 +9,29 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
-   
+    
+    let translate:QTransitionController = QTransitionController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func toSecondVC(_ sender: Any) {
-    
+        
         let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-        let translate:QTransitionController = QTransitionController()
         translate.presentType = .fadeIn
         translate.dismissType = .fadeOut
         vc.transitioningDelegate = translate
         self.present(vc, animated: true, completion: nil)
     }
     
-
-
+    
+    
 }
