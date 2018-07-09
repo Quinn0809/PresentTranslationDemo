@@ -18,6 +18,8 @@
 		E46FF98220C2AA8A00802B07 /* t3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E46FF97D20C2AA8A00802B07 /* t3.jpg */; };
 		E46FF98320C2AA8A00802B07 /* t4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E46FF97E20C2AA8A00802B07 /* t4.jpg */; };
 		E46FF98420C2AA8A00802B07 /* t5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E46FF97F20C2AA8A00802B07 /* t5.jpg */; };
+		E4DF07C920F310C60027B3C1 /* QInteractiveTranslationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF07C820F310C60027B3C1 /* QInteractiveTranslationManager.swift */; };
+		E4DF07CB20F333260027B3C1 /* QTransitionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF07CA20F333260027B3C1 /* QTransitionHelper.swift */; };
 		E4E7A07720C396FF00DC51BC /* QTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7A07620C396FF00DC51BC /* QTransitionController.swift */; };
 		E4E7A07920C399F300DC51BC /* QPresentTransitionAnimatorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7A07820C399F300DC51BC /* QPresentTransitionAnimatorLibrary.swift */; };
 		E4E7A07B20C39B5000DC51BC /* QDismissTransitionAnimatorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E7A07A20C39B5000DC51BC /* QDismissTransitionAnimatorLibrary.swift */; };
@@ -37,6 +39,8 @@
 		E46FF97D20C2AA8A00802B07 /* t3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = t3.jpg; sourceTree = "<group>"; };
 		E46FF97E20C2AA8A00802B07 /* t4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = t4.jpg; sourceTree = "<group>"; };
 		E46FF97F20C2AA8A00802B07 /* t5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = t5.jpg; sourceTree = "<group>"; };
+		E4DF07C820F310C60027B3C1 /* QInteractiveTranslationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QInteractiveTranslationManager.swift; sourceTree = "<group>"; };
+		E4DF07CA20F333260027B3C1 /* QTransitionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTransitionHelper.swift; sourceTree = "<group>"; };
 		E4E7A07620C396FF00DC51BC /* QTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTransitionController.swift; sourceTree = "<group>"; };
 		E4E7A07820C399F300DC51BC /* QPresentTransitionAnimatorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QPresentTransitionAnimatorLibrary.swift; sourceTree = "<group>"; };
 		E4E7A07A20C39B5000DC51BC /* QDismissTransitionAnimatorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QDismissTransitionAnimatorLibrary.swift; sourceTree = "<group>"; };
@@ -78,8 +82,10 @@
 				E46FF97420C2A76500802B07 /* FirstViewController.swift */,
 				E46FF97620C2A77100802B07 /* SecondViewController.swift */,
 				E4E7A07620C396FF00DC51BC /* QTransitionController.swift */,
+				E4DF07CA20F333260027B3C1 /* QTransitionHelper.swift */,
 				E4E7A07820C399F300DC51BC /* QPresentTransitionAnimatorLibrary.swift */,
 				E4E7A07A20C39B5000DC51BC /* QDismissTransitionAnimatorLibrary.swift */,
+				E4DF07C820F310C60027B3C1 /* QInteractiveTranslationManager.swift */,
 			);
 			path = PresentTranslationDemo;
 			sourceTree = "<group>";
@@ -184,10 +190,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E46FF97720C2A77100802B07 /* SecondViewController.swift in Sources */,
+				E4DF07C920F310C60027B3C1 /* QInteractiveTranslationManager.swift in Sources */,
 				E4E7A07920C399F300DC51BC /* QPresentTransitionAnimatorLibrary.swift in Sources */,
 				E46FF97520C2A76500802B07 /* FirstViewController.swift in Sources */,
 				E4E7A07720C396FF00DC51BC /* QTransitionController.swift in Sources */,
 				E4E7A07B20C39B5000DC51BC /* QDismissTransitionAnimatorLibrary.swift in Sources */,
+				E4DF07CB20F333260027B3C1 /* QTransitionHelper.swift in Sources */,
 				E46FF96320C2A74B00802B07 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

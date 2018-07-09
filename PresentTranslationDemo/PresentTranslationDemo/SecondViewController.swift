@@ -12,10 +12,11 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var imageV: UIImageView!
     @IBOutlet weak var bt: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,4 +31,5 @@ class SecondViewController: UIViewController {
     deinit {
         print("SecondViewController",#function)
     }
+    
 }

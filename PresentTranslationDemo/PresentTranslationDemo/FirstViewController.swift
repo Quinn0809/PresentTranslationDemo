@@ -29,9 +29,10 @@ class FirstViewController: UIViewController {
     @IBAction func toSecondVC(_ sender: Any) {
         
         let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-        translate.presentType = .viewIn
+        translate.presentType = .fadeIn
         translate.dismissType = .fadeOut
         translate.fromView = bt
+        translate.dismissInteractionDirection = .down
         vc.transitioningDelegate = translate
         
         self.present(vc, animated: true, completion: nil)

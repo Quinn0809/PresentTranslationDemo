@@ -15,15 +15,7 @@ import UIKit
  */
 
 class QTransitionController: NSObject {
-    
-    enum TranslateType {
-        case present
-        case push
-        case pop
-        case dismiss
-    }
-    
-    private var translateType:TranslateType = .present
+    private var translateType:QTranslateType = .present
     weak var fromView:UIView?
     weak var toView:UIView?
     var presentType:QPresentTransitionAnimatorLibrary = .fadeIn{
@@ -36,7 +28,15 @@ class QTransitionController: NSObject {
             translateType = .dismiss
         }
     }
+    private var interaction:QInteractiveTranslationManager?
 
+    
+    var dismissInteractionDirection:QGestureDirection = .down{
+        didSet{
+            interaction = QInteractiveTranslationManager(gestureDirection: dismissInteractionDirection)
+        }
+    }
+    
 }
 extension QTransitionController:UIViewControllerTransitioningDelegate{
     
@@ -47,22 +47,18 @@ extension QTransitionController:UIViewControllerTransitioningDelegate{
         return dismissType.transition()
     }
     
-    //    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-    //
-    //    }
-    //    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-    //
-    //    }
-    //    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-    //
-    //    }
-    
-}
-extension QTransitionController:UIViewControllerInteractiveTransitioning{
-    func startInteractiveTransition(_ transitionContext: UIViewControllerContextTransitioning) {
-        
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return (interaction?.interation ?? false) ? interaction : nil
     }
     
+    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        //ToDo:present interaction
+        return nil
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        //ToDo:.....
+        return nil
+    }
     
 }
-

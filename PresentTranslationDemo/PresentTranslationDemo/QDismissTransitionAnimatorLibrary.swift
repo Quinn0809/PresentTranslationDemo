@@ -71,7 +71,7 @@ class QDismissAnimatorA: NSObject, UIViewControllerAnimatedTransitioning{
     }
     
 }
-class QDismissAnimatorB: NSObject, UIViewControllerAnimatedTransitioning{
+class QDismissAnimatorB: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning{
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }
@@ -118,3 +118,4 @@ class QDismissAnimatorB: NSObject, UIViewControllerAnimatedTransitioning{
     }
     
 }
+
