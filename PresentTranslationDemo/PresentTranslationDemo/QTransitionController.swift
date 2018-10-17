@@ -28,7 +28,7 @@ class QTransitionController: NSObject {
             translateType = .dismiss
         }
     }
-    private var interaction:QInteractiveTranslationManager?
+    var interaction:QInteractiveTranslationManager?
 
     
     var dismissInteractionDirection:QGestureDirection = .down{

@@ -34,7 +34,7 @@ class FirstViewController: UIViewController {
         translate.fromView = bt
         translate.dismissInteractionDirection = .down
         vc.transitioningDelegate = translate
-        
+        translate.interaction?.addPanGestureForViewController(vc)
         self.present(vc, animated: true, completion: nil)
     }
     

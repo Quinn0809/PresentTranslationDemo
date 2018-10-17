@@ -9,11 +9,11 @@
 import UIKit
 
 class QInteractiveTranslationManager: UIPercentDrivenInteractiveTransition {
-
+    
     weak var vc:UIViewController?
     var gestureDirection:QGestureDirection = .down
     private(set) var interation:Bool = false
-    private(set) var transitionType:QTranslateType = .present
+    private(set) var transitionType:QTranslateType = .dismiss
     
     init(gestureDirection:QGestureDirection) {
         super.init()
@@ -68,7 +68,7 @@ class QInteractiveTranslationManager: UIPercentDrivenInteractiveTransition {
         switch transitionType {
         case .dismiss:
             vc?.dismiss(animated: true, completion: nil)
-
+            
         case .pop:
             vc?.navigationController?.popViewController(animated: true)
         default:
